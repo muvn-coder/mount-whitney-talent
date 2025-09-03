@@ -43,7 +43,7 @@ export function Navigation() {
           <Link href="/" className="flex items-center">
             <div className="h-30 relative -my-6 overflow-visible">
               <img 
-                src="/logo.png" 
+                src={isOnHero ? "/logo.png" : "/logo-black.png"} 
                 alt="Mount Whitney Talent" 
                 className="h-full w-auto object-contain" 
               />
