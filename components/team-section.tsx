@@ -98,8 +98,8 @@ export function TeamSection() {
                   <img
                     src={
                       member.isYellow
-                        ? "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Qmm1t5VUTE74Zy6RSzqFJ9P2ATQ8nE.png"
-                        : "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-CHR23m10RSN6Y5yzhGzpONScRvFmSZ.png"
+                        ? "/yellow-avatar-card.png"
+                        : "/white-avatar-card.png"
                     }
                     alt={member.name}
                     className="w-36 h-36 object-contain"
