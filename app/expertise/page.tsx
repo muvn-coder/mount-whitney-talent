@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 export default function ExpertisePage() {
   const [selectedService, setSelectedService] = useState("Website Development")
   const [highlightVisible, setHighlightVisible] = useState(false)
+  const [isClient, setIsClient] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
   const services = [
@@ -58,6 +59,7 @@ export default function ExpertisePage() {
   }
 
   useEffect(() => {
+    setIsClient(true)
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -87,20 +89,15 @@ export default function ExpertisePage() {
       <section ref={sectionRef} className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-left mb-16">
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Elevate your digital journey{" "}
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+              Elevate your digital journey with us
+              <br />
+              Let us build your{" "}
               <span className="relative inline-block">
-                with us
-                <div className="absolute bottom-0 left-0 w-full h-3 bg-yellow-400 -z-10 animate-[slideIn_1s_ease-out_0.5s_both]"></div>
+                world
+                <div className={`absolute bottom-0 left-0 w-full h-3 bg-yellow-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${highlightVisible || !isClient ? 'w-full' : 'w-0'}`}></div>
               </span>
             </h1>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
-            Let us build your{" "}
-            <span className="relative inline-block">
-              world
-              <div className={`absolute bottom-0 left-0 w-full h-3 bg-yellow-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${highlightVisible ? 'w-full' : 'w-0'}`}></div>
-            </span>
-          </h2>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">

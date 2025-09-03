@@ -34,17 +34,20 @@ export function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const [highlightVisible, setHighlightVisible] = useState(false)
+  const [isClient, setIsClient] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
+    setIsClient(true)
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true)
           setHighlightVisible(true)
+          observer.unobserve(entry.target)
         }
       },
-      { threshold: 0.2 }, // Reduced threshold for earlier trigger
+      { threshold: 0.1 }
     )
 
     if (sectionRef.current) {
@@ -71,8 +74,8 @@ export function TestimonialsSection() {
             <span className="relative inline-block">
               everyone's lips
               <div
-                className={`absolute bottom-1 left-0 h-3 bg-yellow-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
-                  highlightVisible ? "w-full" : "w-0"
+                className={`absolute bottom-0 left-0 w-full h-3 bg-yellow-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
+                  highlightVisible || !isClient ? "w-full" : "w-0"
                 }`}
               ></div>
             </span>

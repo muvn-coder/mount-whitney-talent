@@ -4,11 +4,14 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
 import { useEffect, useState, useRef } from "react"
+import React from "react"
 
-export default function WorksPage({ searchParams }: { searchParams: { page?: string } }) {
-  const currentPage = parseInt(searchParams.page || "1")
+export default function WorksPage({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
+  const unwrappedSearchParams = React.use(searchParams)
+  const currentPage = parseInt(unwrappedSearchParams.page || "1")
   const itemsPerPage = 2
   const [highlightVisible, setHighlightVisible] = useState(false)
+  const [isClient, setIsClient] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
   const allProjects = [
@@ -68,6 +71,7 @@ export default function WorksPage({ searchParams }: { searchParams: { page?: str
   const totalItems = allProjects.length
 
   useEffect(() => {
+    setIsClient(true)
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -101,7 +105,7 @@ export default function WorksPage({ searchParams }: { searchParams: { page?: str
           </h1>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 relative inline-block mt-2">
             Full commitment
-            <div className={`absolute bottom-0 left-0 right-0 h-3 bg-yellow-400 transform -skew-x-12 -z-10 transition-all duration-1000 ease-out ${highlightVisible ? 'w-full' : 'w-0'}`}></div>
+            <div className={`absolute bottom-0 left-0 right-0 h-3 bg-yellow-400 transform -skew-x-12 -z-10 transition-all duration-1000 ease-out ${highlightVisible || !isClient ? 'w-full' : 'w-0'}`}></div>
           </h2>
         </div>
       </section>

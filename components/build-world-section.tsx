@@ -6,6 +6,7 @@ export function BuildWorldSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const [highlightVisible, setHighlightVisible] = useState(false)
+  const [isClient, setIsClient] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
   const images = [
@@ -32,6 +33,7 @@ export function BuildWorldSection() {
   }, [images.length])
 
   useEffect(() => {
+    setIsClient(true)
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -58,7 +60,7 @@ export function BuildWorldSection() {
             World
             <div
               className={`absolute bottom-1 left-0 h-3 bg-gray-900 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
-                highlightVisible ? "w-full" : "w-0"
+                highlightVisible || !isClient ? "w-full" : "w-0"
               }`}
             ></div>
           </span>

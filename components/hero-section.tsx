@@ -4,12 +4,7 @@ import { useEffect, useState } from "react"
 import { Lightbulb, Cog, Smartphone, Monitor, Palette } from "lucide-react"
 
 export function HeroSection() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100)
-    return () => clearTimeout(timer)
-  }, [])
+  const [isVisible, setIsVisible] = useState(true)
 
   const services = [
     { icon: Lightbulb, label: "IT SOLUTIONS", delay: 0 },
@@ -20,7 +15,7 @@ export function HeroSection() {
   ]
 
   return (
-    <section className="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-700 min-h-screen flex items-center relative overflow-hidden">
+    <section className="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-700 min-h-screen flex items-center relative overflow-hidden pt-16">
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1200 300" className="w-full h-64 text-slate-600 opacity-30">
           <path
@@ -31,21 +26,12 @@ export function HeroSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
-        <div
-          className={`transition-all duration-1000 ease-out ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
+        <div className="animate-[fadeInUp_1s_ease-out_forwards]">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Building and transforming businesses through{" "}
             <span className="relative inline-block">
               design innovation
-              <div
-                className={`absolute bottom-1 left-0 h-2 bg-yellow-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
-                  isVisible ? "w-full" : "w-0"
-                }`}
-                style={{ transitionDelay: "800ms" }}
-              ></div>
+              <div className="absolute bottom-1 left-0 h-2 bg-yellow-400 transform -skew-x-12 animate-[slideIn_1s_ease-out_0.8s_both] -z-10"></div>
             </span>
           </h1>
 
@@ -55,28 +41,44 @@ export function HeroSection() {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 lg:gap-16 mt-16">
+        <div className="flex flex-wrap justify-center items-end gap-8 md:gap-16 lg:gap-20 mt-16">
           {services.map((service, index) => (
             <div
               key={service.label}
-              className={`transition-all duration-700 ease-out ${
-                isVisible ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-75 translate-y-8"
+              className={`flex flex-col items-center group cursor-pointer animate-[fadeInUp_0.7s_ease-out_forwards] ${
+                index % 2 === 0 ? "transform -translate-y-8" : "transform translate-y-8"
               }`}
-              style={{ transitionDelay: `${service.delay + 400}ms` }}
+              style={{ animationDelay: `${service.delay + 400}ms` }}
             >
-              <div className="flex flex-col items-center group cursor-pointer">
-                <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mb-3 transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 shadow-lg hover:shadow-xl">
-                  <service.icon size={32} className="text-slate-900" />
-                </div>
-                <span className="text-xs text-gray-300 font-medium text-center max-w-20 leading-tight uppercase tracking-wide">
-                  {service.label}
-                </span>
+              <span className="text-xs text-gray-300 font-medium text-center max-w-24 leading-tight uppercase tracking-wide mb-3">
+                {service.label}
+              </span>
+              <div className="w-28 h-28 bg-yellow-400 rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 shadow-lg hover:shadow-xl">
+                <service.icon size={40} className="text-slate-900" />
               </div>
             </div>
           ))}
         </div>
 
         <style jsx>{`
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          @keyframes slideIn {
+            from {
+              width: 0;
+            }
+            to {
+              width: 100%;
+            }
+          }
           @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }

@@ -38,34 +38,7 @@ function Counter({ end, duration, delay, isVisible }: CounterProps) {
 }
 
 export function AchievementsSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [highlightVisible, setHighlightVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-          setTimeout(() => {
-            setHighlightVisible(true)
-          }, 300)
-          observer.unobserve(entry.target)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
-      }
-    }
-  }, [])
+  const [isVisible, setIsVisible] = useState(true)
 
   const achievements = [
     { number: 20, label: "IT Solutions", delay: 0 },
@@ -74,18 +47,14 @@ export function AchievementsSection() {
   ]
 
   return (
-    <section ref={sectionRef} className="py-20 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-[fadeInUp_1s_ease-out_forwards]">
             Our{" "}
             <span className="relative inline-block">
               Achievements
-              <div
-                className={`absolute bottom-1 left-0 h-3 bg-yellow-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
-                  highlightVisible ? "w-full opacity-100" : "w-0 opacity-0"
-                }`}
-              ></div>
+              <div className="absolute bottom-1 left-0 h-3 bg-yellow-400 transform -skew-x-12 animate-[slideIn_1s_ease-out_0.5s_both] -z-10"></div>
             </span>
           </h2>
         </div>
@@ -94,10 +63,8 @@ export function AchievementsSection() {
           {achievements.map((achievement, index) => (
             <div
               key={achievement.label}
-              className={`transition-all duration-800 ease-out ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              } ${index === 1 ? "md:mt-12" : ""}`}
-              style={{ transitionDelay: `${achievement.delay + 500}ms` }}
+              className={`animate-[fadeInUp_0.8s_ease-out_forwards] ${index === 1 ? "md:mt-12" : ""}`}
+              style={{ animationDelay: `${achievement.delay + 500}ms` }}
             >
               <div className="text-6xl md:text-7xl font-bold text-yellow-400 mb-4">
                 <Counter
@@ -112,6 +79,27 @@ export function AchievementsSection() {
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes slideIn {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+      `}</style>
     </section>
   )
 }

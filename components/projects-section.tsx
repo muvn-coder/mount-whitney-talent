@@ -32,16 +32,16 @@ const projects = [
 export function ProjectsSection() {
   const [isVisible, setIsVisible] = useState(false)
   const [highlightVisible, setHighlightVisible] = useState(false)
+  const [isClient, setIsClient] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
+    setIsClient(true)
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true)
-          setTimeout(() => {
-            setHighlightVisible(true)
-          }, 300)
+          setHighlightVisible(true)
           observer.unobserve(entry.target)
         }
       },
@@ -52,11 +52,7 @@ export function ProjectsSection() {
       observer.observe(sectionRef.current)
     }
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
-      }
-    }
+    return () => observer.disconnect()
   }, [])
 
   return (
@@ -66,10 +62,10 @@ export function ProjectsSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Explore some of our{" "}
             <span className="relative inline-block">
-              projects
+              Our Projects
               <div
                 className={`absolute bottom-1 left-0 h-3 bg-yellow-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
-                  highlightVisible ? "w-full" : "w-0"
+                  highlightVisible || !isClient ? "w-full" : "w-0"
                 }`}
               ></div>
             </span>

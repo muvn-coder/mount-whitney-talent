@@ -1,11 +1,14 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -16,15 +19,35 @@ export function Navigation() {
     { name: "Contact", href: "/contact" },
   ]
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const isHomePage = pathname === '/'
+  const isOnHero = isHomePage && !isScrolled
+
   return (
-    <nav className="bg-white shadow-sm relative z-50">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isOnHero 
+        ? 'bg-slate-900/95 backdrop-blur-sm' 
+        : 'bg-white/95 backdrop-blur-sm shadow-sm'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center py-3">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="text-2xl font-bold text-gray-900">
-              deegix
-              <div className="h-1 w-12 bg-yellow-400 mt-1"></div>
+            <div className={`text-2xl font-bold transition-colors ${
+              isOnHero ? 'text-white' : 'text-gray-900'
+            }`}>
+              Deegix
+              <div className={`h-1 w-12 mt-1 transition-colors ${
+                isOnHero ? 'bg-yellow-400' : 'bg-yellow-400'
+              }`}></div>
             </div>
           </Link>
 
@@ -34,16 +57,28 @@ export function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+                className={`relative px-3 py-2 text-sm font-medium transition-colors ${
+                  isOnHero ? 'text-white hover:text-yellow-400' : 'text-gray-700 hover:text-gray-900'
+                } ${
+                  pathname === item.href ? (isOnHero ? 'text-yellow-400' : 'text-gray-900') : ''
+                } group`}
               >
                 {item.name}
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${
+                  pathname === item.href ? 'scale-x-100' : ''
+                }`}></span>
               </Link>
             ))}
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-700 hover:text-gray-900 p-2">
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)} 
+              className={`p-2 transition-colors ${
+                isOnHero ? 'text-white hover:text-yellow-300' : 'text-gray-700 hover:text-gray-900'
+              }`}
+            >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -57,10 +92,17 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                  className={`block relative px-3 py-2 text-base font-medium transition-colors ${
+                    pathname === item.href 
+                      ? 'text-yellow-600 font-bold bg-gray-50' 
+                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+                  } group`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
+                  <span className={`absolute bottom-0 left-3 right-3 h-0.5 bg-yellow-400 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${
+                    pathname === item.href ? 'scale-x-100' : ''
+                  }`}></span>
                 </Link>
               ))}
             </div>

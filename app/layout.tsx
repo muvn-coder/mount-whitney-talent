@@ -6,9 +6,9 @@ import { ScrollToTop } from '@/components/scroll-to-top'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'Mount Whitney Talent',
+  description: 'Mount Whitney Talent',
+  generator: 'talent',
 }
 
 export default function RootLayout({

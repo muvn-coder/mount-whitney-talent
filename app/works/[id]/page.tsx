@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { useEffect, useState, useRef } from "react"
+import React from "react"
 
 interface Project {
   id: number
@@ -68,12 +69,13 @@ const projects: Project[] = [
 ]
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 export default function ProjectPage({ params }: ProjectPageProps) {
+  const { id } = React.use(params)
   const [isClient, setIsClient] = useState(false)
   const [projectHighlightVisible, setProjectHighlightVisible] = useState(false)
   const [outcomeHighlightVisible, setOutcomeHighlightVisible] = useState(false)
@@ -87,9 +89,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setProjectHighlightVisible(true)
-          setTimeout(() => {
-            setOutcomeHighlightVisible(true)
-          }, 300)
+          setOutcomeHighlightVisible(true)
           observer.unobserve(entry.target)
         }
       },
@@ -103,7 +103,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     return () => observer.disconnect()
   }, [])
 
-  const { id } = params
   const projectId = parseInt(typeof id === 'string' ? id : '1')
   const project = projects.find(p => p.id === projectId)
 
