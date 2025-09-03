@@ -79,17 +79,18 @@ export function AboutSection() {
             style={{ transitionDelay: "700ms" }}
           >
             <p>
-              We are an aspiring team with keen practicing to supersede ourselves in our skill sets and knowledge to
-              deliver the best results.
+              At Mount Whitney Talent, we’re not just offering jobs — we’re creating a launchpad for developers who want to go further.
+
             </p>
             <p>
-              Our expertise in technologies and our acute interest fused together is the most innovative ways to ensure
-              clients' satisfaction.
+              
+Here, you won’t just code. You’ll design, build, and shape systems across multiple domains — 
+from web and mobile to AI, hardware, and architecture. You’ll learn directly from senior engineers, 
+collaborate on high-impact projects, and grow into a developer who can lead, mentor, and innovate.
+
             </p>
             <p>
-              We believe in delivering tailor-made products to our clients as every unique business requires a different
-              approach and solution. Through our comprehensive work, we foster an unparalleled relationship and deliver
-              with pride.
+              We believe in investing in people first. When developers grow, the company grows. That’s why we’ve built a culture that combines career acceleration, hands-on mentorship, and lifestyle experiences that make the journey as rewarding as the destination."
             </p>
           </div>
         </div>
