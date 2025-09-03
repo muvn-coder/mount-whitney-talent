@@ -38,16 +38,15 @@ export function Navigation() {
         : 'bg-white/95 backdrop-blur-sm shadow-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3">
+        <div className="flex justify-between items-center py-3 h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className={`text-2xl font-bold transition-colors ${
-              isOnHero ? 'text-white' : 'text-gray-900'
-            }`}>
-              Mount Whitney Talent
-              <div className={`h-1 w-12 mt-1 transition-colors ${
-                isOnHero ? 'bg-yellow-400' : 'bg-yellow-400'
-              }`}></div>
+            <div className="h-30 relative -my-6 overflow-visible">
+              <img 
+                src="/logo.png" 
+                alt="Mount Whitney Talent" 
+                className="h-full w-auto object-contain" 
+              />
             </div>
           </Link>
 
