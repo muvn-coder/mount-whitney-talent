@@ -114,7 +114,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ id: string 
           {/* Title */}
           <header className="mb-8">
             <div className="mb-4">
-              <span className="bg-blue-500 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
+              <span className="bg-slate-400 text-slate-900 px-3 py-1 rounded-full text-sm font-medium">
                 {post.category}
               </span>
             </div>

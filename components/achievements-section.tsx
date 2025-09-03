@@ -54,7 +54,7 @@ export function AchievementsSection() {
             Our{" "}
             <span className="relative inline-block">
               Achievements
-              <div className="absolute bottom-1 left-0 h-3 bg-blue-500 transform -skew-x-12 animate-[slideIn_1s_ease-out_0.5s_both] -z-10"></div>
+              <div className="absolute bottom-1 left-0 h-3 bg-slate-400 transform -skew-x-12 animate-[slideIn_1s_ease-out_0.5s_both] -z-10"></div>
             </span>
           </h2>
         </div>
@@ -66,7 +66,7 @@ export function AchievementsSection() {
               className={`animate-[fadeInUp_0.8s_ease-out_forwards] ${index === 1 ? "md:mt-12" : ""}`}
               style={{ animationDelay: `${achievement.delay + 500}ms` }}
             >
-              <div className="text-6xl md:text-7xl font-bold text-blue-500 mb-4">
+              <div className="text-6xl md:text-7xl font-bold text-slate-400 mb-4">
                 <Counter
                   end={achievement.number}
                   duration={2000}

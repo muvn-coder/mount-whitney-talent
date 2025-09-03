@@ -95,7 +95,7 @@ export default function ExpertisePage() {
               Let us build your{" "}
               <span className="relative inline-block">
                 world
-                <div className={`absolute bottom-0 left-0 w-full h-3 bg-blue-500 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${highlightVisible || !isClient ? 'w-full' : 'w-0'}`}></div>
+                <div className={`absolute bottom-0 left-0 w-full h-3 bg-slate-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${highlightVisible || !isClient ? 'w-full' : 'w-0'}`}></div>
               </span>
             </h1>
           </div>
@@ -115,7 +115,7 @@ export default function ExpertisePage() {
                 <ul className="space-y-2">
                   {serviceContent[selectedService as keyof typeof serviceContent].features.map((feature, index) => (
                     <li key={index} className="flex items-center text-gray-600">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-slate-400 rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}
@@ -132,8 +132,8 @@ export default function ExpertisePage() {
                     onClick={() => setSelectedService(service)}
                     className={`w-full text-left py-2 transition-colors duration-300 text-3xl font-bold ${
                       selectedService === service
-                        ? "text-blue-500"
-                : "text-gray-900 hover:text-blue-500"
+                        ? "text-slate-400"
+                : "text-gray-900 hover:text-slate-400"
                     }`}
                   >
                     {service}

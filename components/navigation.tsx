@@ -57,13 +57,13 @@ export function Navigation() {
                 key={item.name}
                 href={item.href}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors ${
-                  isOnHero ? 'text-white hover:text-blue-500' : 'text-gray-700 hover:text-gray-900'
+                  isOnHero ? 'text-white hover:text-slate-400' : 'text-gray-700 hover:text-gray-900'
                 } ${
-                  pathname === item.href ? (isOnHero ? 'text-blue-500' : 'text-gray-900') : ''
+                  pathname === item.href ? (isOnHero ? 'text-slate-400' : 'text-gray-900') : ''
                 } group`}
               >
                 {item.name}
-                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-slate-400 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${
                   pathname === item.href ? 'scale-x-100' : ''
                 }`}></span>
               </Link>
@@ -75,7 +75,7 @@ export function Navigation() {
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)} 
               className={`p-2 transition-colors ${
-                isOnHero ? 'text-white hover:text-blue-400' : 'text-gray-700 hover:text-gray-900'
+                isOnHero ? 'text-white hover:text-slate-400' : 'text-gray-700 hover:text-gray-900'
               }`}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -93,13 +93,13 @@ export function Navigation() {
                   href={item.href}
                   className={`block relative px-3 py-2 text-base font-medium transition-colors ${
                     pathname === item.href 
-                      ? 'text-blue-600 font-bold bg-gray-50' 
+                      ? 'text-slate-400 font-bold bg-gray-50' 
                       : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                   } group`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                  <span className={`absolute bottom-0 left-3 right-3 h-0.5 bg-blue-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${
+                  <span className={`absolute bottom-0 left-3 right-3 h-0.5 bg-slate-400 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${
                     pathname === item.href ? 'scale-x-100' : ''
                   }`}></span>
                 </Link>

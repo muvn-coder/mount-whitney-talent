@@ -23,7 +23,7 @@ export function ClienteleSection() {
             Our{" "}
             <span className="relative inline-block">
               clientele
-              <div className="absolute bottom-1 left-0 h-3 bg-blue-500 transform -skew-x-12 animate-[slideIn_1s_ease-out_0.5s_both] -z-10"></div>
+              <div className="absolute bottom-1 left-0 h-3 bg-slate-400 transform -skew-x-12 animate-[slideIn_1s_ease-out_0.5s_both] -z-10"></div>
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto animate-[fadeInUp_1s_ease-out_0.3s_both]">

@@ -70,7 +70,7 @@ export function TeamSection() {
             <span className="relative inline-block">
               Team
               <div
-                  className={`absolute bottom-1 left-0 h-3 bg-blue-500 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
+                  className={`absolute bottom-1 left-0 h-3 bg-slate-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
                     highlightVisible || !isClient ? "w-full" : "w-0"
                   }`}
                 ></div>
@@ -92,7 +92,7 @@ export function TeamSection() {
               <div className="group cursor-pointer relative">
                 <div
                   className={`w-full aspect-square ${
-                    member.isYellow ? "bg-blue-500" : "bg-gray-100"
+                    member.isYellow ? "bg-slate-400" : "bg-gray-100"
                   } flex items-center justify-center transform transition-all duration-300 group-hover:brightness-75 relative overflow-hidden`}
                 >
                   <img
@@ -112,7 +112,7 @@ export function TeamSection() {
                         <p className="text-base italic mb-3">"{member.quote}"</p>
                       </div>
                       <div className="text-left">
-                        <p className="text-base text-blue-500">{member.role}</p>
+                        <p className="text-base text-slate-400">{member.role}</p>
                       </div>
                     </div>
                   )}

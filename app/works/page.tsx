@@ -105,7 +105,7 @@ export default function WorksPage({ searchParams }: { searchParams: Promise<{ pa
           </h1>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 relative inline-block mt-2">
             Full commitment
-            <div className={`absolute bottom-0 left-0 right-0 h-3 bg-blue-500 transform -skew-x-12 -z-10 transition-all duration-1000 ease-out ${highlightVisible || !isClient ? 'w-full' : 'w-0'}`}></div>
+            <div className={`absolute bottom-0 left-0 right-0 h-3 bg-slate-400 transform -skew-x-12 -z-10 transition-all duration-1000 ease-out ${highlightVisible || !isClient ? 'w-full' : 'w-0'}`}></div>
           </h2>
         </div>
       </section>
@@ -143,7 +143,7 @@ export default function WorksPage({ searchParams }: { searchParams: Promise<{ pa
                   href={`/works?page=${page}`}
                   className={`px-4 py-2 rounded-md text-sm font-medium ${
                     currentPage === page
-                      ? "bg-blue-500 text-gray-900"
+                      ? "bg-slate-400 text-gray-900"
                       : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                   }`}
                 >

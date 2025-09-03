@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer>
       {/* Blue Contact Section */}
-      <div className="bg-blue-500 py-16">
+      <div className="bg-slate-400 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
@@ -22,8 +22,8 @@ export function Footer() {
             <div className="flex gap-8">
               <div className="text-center">
                 <p className="text-gray-900 font-medium mb-2">Hi</p>
-                <div className="w-24 h-24 bg-blue-400 rounded-full mb-2 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-blue-300 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-24 h-24 bg-slate-300 rounded-full mb-2 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
                     <Image src="/male.png" alt="Male" width={80} height={80} className="object-cover" />
                   </div>
                 </div>
@@ -31,8 +31,8 @@ export function Footer() {
 
               <div className="text-center">
                 <p className="text-gray-900 font-medium mb-2">Hai</p>
-                <div className="w-24 h-24 bg-blue-400 rounded-full mb-2 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-blue-300 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-24 h-24 bg-slate-300 rounded-full mb-2 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
                     <Image src="/female.png" alt="Female" width={80} height={80} className="object-cover" />
                   </div>
                 </div>
@@ -40,8 +40,8 @@ export function Footer() {
 
               <div className="text-center">
                 <p className="text-gray-900 font-medium mb-2">你好</p>
-                <div className="w-24 h-24 bg-blue-400 rounded-full mb-2 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-blue-300 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-24 h-24 bg-slate-300 rounded-full mb-2 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
                     <Image src="/male.png" alt="Male" width={80} height={80} className="object-cover" />
                   </div>
                 </div>
@@ -49,8 +49,8 @@ export function Footer() {
 
               <div className="text-center">
                 <p className="text-gray-900 font-medium mb-2">வணக்கம்</p>
-                <div className="w-24 h-24 bg-blue-400 rounded-full mb-2 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-blue-300 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-24 h-24 bg-slate-300 rounded-full mb-2 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
                     <Image src="/female.png" alt="Female" width={80} height={80} className="object-cover" />
                   </div>
                 </div>
@@ -65,7 +65,11 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
             <div className="lg:col-span-1">
-              <h3 className="text-4xl md:text-5xl font-bold">We Build Your World</h3>
+              <h3 className="text-4xl md:text-5xl font-bold">
+              We Build <span className="relative inline-block">Your World
+                <div className="absolute bottom-0 left-0 h-2 bg-slate-400 transform -skew-x-12 w-full"></div>
+              </span>
+            </h3>
             </div>
 
             <div className="flex flex-col items-center text-center">
@@ -98,19 +102,19 @@ export function Footer() {
             <div className="flex justify-center gap-4 mb-8">
               <a
                 href="#"
-                className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"
+                className="w-12 h-12 bg-slate-400 rounded-full flex items-center justify-center hover:bg-slate-300 transition-colors"
               >
                 <Linkedin size={24} className="text-gray-900" />
               </a>
               <a
                 href="#"
-                className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"
+                className="w-12 h-12 bg-slate-400 rounded-full flex items-center justify-center hover:bg-slate-300 transition-colors"
               >
                 <Facebook size={24} className="text-gray-900" />
               </a>
               <a
                 href="#"
-                className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"
+                className="w-12 h-12 bg-slate-400 rounded-full flex items-center justify-center hover:bg-slate-300 transition-colors"
               >
                 <Instagram size={24} className="text-gray-900" />
               </a>

@@ -5,8 +5,8 @@ import { useState, useEffect, useRef } from "react"
 export function BuildWorldSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
-  const [highlightVisible, setHighlightVisible] = useState(false)
-  const [isClient, setIsClient] = useState(false)
+
+
   const sectionRef = useRef<HTMLElement>(null)
 
   const images = [
@@ -33,12 +33,12 @@ export function BuildWorldSection() {
   }, [images.length])
 
   useEffect(() => {
-    setIsClient(true)
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true)
-          setHighlightVisible(true)
+
         }
       },
       { threshold: 0.2 }, // Reduced threshold for earlier trigger
@@ -52,20 +52,16 @@ export function BuildWorldSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 bg-blue-500">
+    <section ref={sectionRef} className="py-20 bg-gray-100">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">
+        <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-8">
           We Build Your{" "}
           <span className="relative inline-block">
             World
-            <div
-              className={`absolute bottom-1 left-0 h-3 bg-gray-900 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
-                highlightVisible || !isClient ? "w-full" : "w-0"
-              }`}
-            ></div>
+            <div className="absolute bottom-0 left-0 h-3 bg-slate-400 transform -skew-x-12 w-full"></div>
           </span>
         </h2>
-        <p className="text-lg md:text-xl text-gray-900 max-w-4xl mx-auto leading-relaxed mb-16">
+        <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-16">
           We are an aspiring team who keeps pursuing to supersede ourselves in our skill sets and know-how to deliver
           the best to our clients. We believe in delivering tailor-made products to our clients as every unique business
           requires a different spotlight to shine.
@@ -84,7 +80,7 @@ export function BuildWorldSection() {
                     : "scale-90 opacity-60"
               }`}
             >
-              <div className="bg-gray-900 rounded-3xl p-2 shadow-2xl">
+              <div className="bg-gray-300 rounded-3xl p-2 shadow-2xl">
                 <img
                   src={image.src || "/placeholder.svg"}
                   alt={image.alt}

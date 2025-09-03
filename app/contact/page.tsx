@@ -46,7 +46,7 @@ export default function ContactPage() {
           </h1>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 relative inline-block mt-2">
             Get in touch
-            <div className={`absolute bottom-0 left-0 right-0 h-3 bg-blue-500 transform -skew-x-12 -z-10 transition-all duration-1000 ease-out ${highlightVisible || !isClient ? 'w-full' : 'w-0'}`}></div>
+            <div className={`absolute bottom-0 left-0 right-0 h-3 bg-slate-400 transform -skew-x-12 -z-10 transition-all duration-1000 ease-out ${highlightVisible || !isClient ? 'w-full' : 'w-0'}`}></div>
           </h2>
         </div>
       </section>

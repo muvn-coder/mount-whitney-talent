@@ -113,7 +113,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <h1 className="text-4xl font-bold text-center">Project not found</h1>
           <div className="text-center mt-8">
-            <Link href="/works" className="text-blue-600 hover:text-blue-700">
+            <Link href="/works" className="text-slate-400 hover:text-slate-500">
               ← Back to works
             </Link>
           </div>
@@ -149,7 +149,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             <div className="md:col-span-4 md:col-start-3">
               <h2 className="text-3xl font-bold text-gray-900 mb-4 relative inline-block">
                 The Project
-                <div className={`absolute bottom-0 left-0 w-full h-3 bg-blue-500 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
+                <div className={`absolute bottom-0 left-0 w-full h-3 bg-slate-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
                   projectHighlightVisible || !isClient ? "w-full" : "w-0"
                 }`}></div>
               </h2>
@@ -188,7 +188,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="text-center mt-16">
             <Link 
               href="/works" 
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-slate-900 bg-slate-400 hover:bg-slate-500"
             >
               ← Back to all projects
             </Link>

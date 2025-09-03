@@ -91,7 +91,7 @@ export default function InsightsPage() {
           </h1>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 relative inline-block mt-2">
             Full commitment
-            <div className={`absolute bottom-0 left-0 right-0 h-3 bg-blue-500 transform -skew-x-12 -z-10 transition-all duration-1000 ease-out ${highlightVisible || !isClient ? 'w-full' : 'w-0'}`}></div>
+            <div className={`absolute bottom-0 left-0 right-0 h-3 bg-slate-400 transform -skew-x-12 -z-10 transition-all duration-1000 ease-out ${highlightVisible || !isClient ? 'w-full' : 'w-0'}`}></div>
           </h2>
         </div>
       </section>
@@ -106,7 +106,7 @@ export default function InsightsPage() {
                 onClick={() => setSelectedCategory(category)}
                 className={`text-lg font-medium transition-colors pb-2 border-b-2 ${
                   selectedCategory === category
-                    ? "text-gray-900 border-blue-500 font-bold"
+                    ? "text-gray-900 border-slate-400 font-bold"
                     : "text-gray-600 border-transparent hover:text-gray-900"
                 }`}
               >
@@ -133,13 +133,13 @@ export default function InsightsPage() {
                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="bg-blue-500 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-slate-400 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
                           {article.category}
                         </span>
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <h2 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
+                      <h2 className="text-lg font-bold text-gray-900 group-hover:text-slate-500 transition-colors leading-tight">
                         {article.title}
                       </h2>
                       <p className="text-gray-600 text-sm leading-relaxed">{article.excerpt}</p>
@@ -220,7 +220,7 @@ export default function InsightsPage() {
                         {filteredArticles[0]?.category}
                       </span>
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors leading-tight">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-slate-300 transition-colors leading-tight">
                       {filteredArticles[0]?.title}
                     </h3>
                     <p className="text-white/90 text-sm leading-relaxed mb-2">{filteredArticles[0]?.excerpt}</p>
