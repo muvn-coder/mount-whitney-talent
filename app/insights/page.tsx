@@ -16,7 +16,7 @@ export default function InsightsPage() {
       id: "web-development-trends-2024",
       title: "The Future of Web Development: Trends to Watch in 2024",
       excerpt: "Explore the latest trends shaping the web development landscape and how they impact business growth.",
-      author: "Deegix Team",
+      author: "Mount Whitney Talent Team",
       date: "December 15, 2024",
       category: "Web Development",
       image: "/web-development-trends-2024.png",

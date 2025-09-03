@@ -15,11 +15,11 @@ export function BuildWorldSection() {
       alt: "Branding Materials",
     },
     {
-      src: "/team-photo-in-aquarium-setting.png",
+      src: "/team-photo-in-aquarium-setting.jpeg",
       alt: "Team Photo",
     },
     {
-      src: "/casual-team-members-posing-together.png",
+      src: "/casual-team-members-posing-together.jpg",
       alt: "Team Members",
     },
   ]

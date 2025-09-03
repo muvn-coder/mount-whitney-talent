@@ -23,7 +23,7 @@ const blogPosts: Record<string, BlogPost> = {
     id: "web-development-trends-2024",
     title: "The Future of Web Development: Trends to Watch in 2024",
     content: "The web development landscape is evolving at an unprecedented pace, driven by emerging technologies and changing user expectations. As we move into 2024, several key trends are reshaping how we build and interact with web applications.\n\nFrom the rise of AI-powered development tools to the increasing importance of web performance and accessibility, developers are facing new challenges and opportunities. The integration of machine learning capabilities into web applications is becoming more accessible, while serverless architectures continue to mature and offer scalable solutions for businesses of all sizes.\n\nProgressive Web Apps (PWAs) are reaching new levels of sophistication, blurring the lines between web and native applications. Meanwhile, the focus on sustainability in tech is driving innovations in green web development practices, ensuring that our digital solutions are not only efficient but also environmentally responsible.",
-    author: "Deegix Team",
+    author: "Mount Whitney Talent Team",
     date: "December 15, 2024",
     category: "Web Development",
     image: "/web-development-trends-2024.png",

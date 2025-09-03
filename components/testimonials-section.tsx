@@ -9,7 +9,7 @@ const testimonials = [
     name: "Sarah Johnson",
     position: "CEO, TechStart",
     content:
-      "Deegix transformed our digital presence completely. Their attention to detail and innovative approach exceeded our expectations.",
+      "Mount Whitney Talent transformed our digital presence completely. Their attention to detail and innovative approach exceeded our expectations.",
     avatar: "/professional-woman-avatar.png",
   },
   {
@@ -17,7 +17,7 @@ const testimonials = [
     name: "Michael Chen",
     position: "CTO, InnovateNow",
     content:
-      "Working with Deegix was a game-changer. They delivered a solution that perfectly aligned with our business goals.",
+      "Working with Mount Whitney Talent was a game-changer. They delivered a solution that perfectly aligned with our business goals.",
     avatar: "/professional-man-avatar.png",
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
     name: "Emily Rodriguez",
     position: "Marketing Director, GrowthCo",
     content:
-      "The team at Deegix is exceptional. They understood our vision and brought it to life with remarkable precision.",
+      "The team at Mount Whitney Talent is exceptional. They understood our vision and brought it to life with remarkable precision.",
     avatar: "/professional-woman-avatar.png",
   },
 ]

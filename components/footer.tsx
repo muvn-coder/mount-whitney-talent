@@ -79,7 +79,7 @@ export function Footer() {
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4">
                 <Mail size={24} className="text-gray-900" />
               </div>
-              <span className="text-lg">hello@deegix.com</span>
+              <span className="text-lg">hello@mwhitneytalent.com</span>
             </div>
 
             <div className="flex flex-col items-center text-center">
@@ -117,7 +117,7 @@ export function Footer() {
             </div>
 
             <div className="text-center">
-              <p className="text-sm text-gray-400">© 2024 Deegix Pte Ltd</p>
+              <p className="text-sm text-gray-400">© 2025 Mount Whitney Talent Ltd</p>
             </div>
           </div>
         </div>

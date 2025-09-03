@@ -44,7 +44,7 @@ export function Navigation() {
             <div className={`text-2xl font-bold transition-colors ${
               isOnHero ? 'text-white' : 'text-gray-900'
             }`}>
-              Deegix
+              Mount Whitney Talent
               <div className={`h-1 w-12 mt-1 transition-colors ${
                 isOnHero ? 'bg-yellow-400' : 'bg-yellow-400'
               }`}></div>
