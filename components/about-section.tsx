@@ -36,7 +36,7 @@ export function AboutSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
               We are{" "}
               <span className="relative inline-block">
-                Dee Team
+                Mount Whitney Talent
                 <span
                   className={`absolute bottom-1 left-0 h-3 bg-yellow-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
                     isVisible ? "w-full" : "w-0"

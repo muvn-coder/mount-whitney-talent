@@ -13,7 +13,7 @@ export function Footer() {
                 Get in touch with us, and let us be your starting point through this journey.
               </h2>
               <button className="bg-gray-900 text-white px-8 py-3 rounded hover:bg-gray-800 transition-colors inline-flex items-center gap-2">
-                Contact Deeteam
+                Contact Mount Whitney Talent
                 <span>→</span>
               </button>
             </div>
