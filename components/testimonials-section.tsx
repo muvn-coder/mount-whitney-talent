@@ -74,7 +74,7 @@ export function TestimonialsSection() {
             <span className="relative inline-block">
               everyone's lips
               <div
-                className={`absolute bottom-0 left-0 w-full h-3 bg-yellow-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
+                className={`absolute bottom-0 left-0 w-full h-3 bg-blue-500 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
                   highlightVisible || !isClient ? "w-full" : "w-0"
                 }`}
               ></div>
@@ -105,14 +105,14 @@ export function TestimonialsSection() {
 
             <button
               onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-yellow-400 hover:bg-yellow-500 transition-colors"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-blue-500 hover:bg-blue-600 transition-colors"
             >
               <ChevronLeft className="w-6 h-6 text-white" />
             </button>
 
             <button
               onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-yellow-400 hover:bg-yellow-500 transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-blue-500 hover:bg-blue-600 transition-colors"
             >
               <ChevronRight className="w-6 h-6 text-white" />
             </button>
@@ -124,7 +124,7 @@ export function TestimonialsSection() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentIndex ? "bg-yellow-400" : "bg-gray-300"
+                  index === currentIndex ? "bg-blue-500" : "bg-gray-300"
                 }`}
               />
             ))}

@@ -45,7 +45,7 @@ export function ContactSection() {
                 required
                 value={formData.fullName}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:bg-white transition-colors"
+                className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors"
               />
             </div>
             <div>
@@ -59,7 +59,7 @@ export function ContactSection() {
                 required
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:bg-white transition-colors"
+                className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors"
               />
             </div>
           </div>
@@ -76,7 +76,7 @@ export function ContactSection() {
                 required
                 value={formData.contactNumber}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:bg-white transition-colors"
+                className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors"
               />
             </div>
             <div>
@@ -89,7 +89,7 @@ export function ContactSection() {
                 name="company"
                 value={formData.company}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:bg-white transition-colors"
+                className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors"
               />
             </div>
           </div>
@@ -105,7 +105,7 @@ export function ContactSection() {
                     value={option}
                     checked={formData.hearAbout === option}
                     onChange={handleInputChange}
-                    className="w-4 h-4 text-yellow-400 border-gray-300 focus:ring-yellow-400"
+                    className="w-4 h-4 text-blue-500 border-gray-300 focus:ring-blue-500"
                   />
                   <span className="ml-2 text-gray-700">{option}</span>
                 </label>
@@ -123,7 +123,7 @@ export function ContactSection() {
               rows={6}
               value={formData.message}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:bg-white transition-colors resize-none"
+              className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white transition-colors resize-none"
             />
           </div>
 

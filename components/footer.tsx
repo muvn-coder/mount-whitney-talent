@@ -4,8 +4,8 @@ import Image from "next/image"
 export function Footer() {
   return (
     <footer>
-      {/* Yellow Contact Section */}
-      <div className="bg-yellow-400 py-16">
+      {/* Blue Contact Section */}
+      <div className="bg-blue-500 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
@@ -22,8 +22,8 @@ export function Footer() {
             <div className="flex gap-8">
               <div className="text-center">
                 <p className="text-gray-900 font-medium mb-2">Hi</p>
-                <div className="w-24 h-24 bg-yellow-300 rounded-full mb-2 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-yellow-200 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-24 h-24 bg-blue-400 rounded-full mb-2 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-blue-300 rounded-full flex items-center justify-center overflow-hidden">
                     <Image src="/male.png" alt="Male" width={80} height={80} className="object-cover" />
                   </div>
                 </div>
@@ -31,8 +31,8 @@ export function Footer() {
 
               <div className="text-center">
                 <p className="text-gray-900 font-medium mb-2">Hai</p>
-                <div className="w-24 h-24 bg-yellow-300 rounded-full mb-2 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-yellow-200 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-24 h-24 bg-blue-400 rounded-full mb-2 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-blue-300 rounded-full flex items-center justify-center overflow-hidden">
                     <Image src="/female.png" alt="Female" width={80} height={80} className="object-cover" />
                   </div>
                 </div>
@@ -40,8 +40,8 @@ export function Footer() {
 
               <div className="text-center">
                 <p className="text-gray-900 font-medium mb-2">你好</p>
-                <div className="w-24 h-24 bg-yellow-300 rounded-full mb-2 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-yellow-200 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-24 h-24 bg-blue-400 rounded-full mb-2 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-blue-300 rounded-full flex items-center justify-center overflow-hidden">
                     <Image src="/male.png" alt="Male" width={80} height={80} className="object-cover" />
                   </div>
                 </div>
@@ -49,8 +49,8 @@ export function Footer() {
 
               <div className="text-center">
                 <p className="text-gray-900 font-medium mb-2">வணக்கம்</p>
-                <div className="w-24 h-24 bg-yellow-300 rounded-full mb-2 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-yellow-200 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-24 h-24 bg-blue-400 rounded-full mb-2 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-blue-300 rounded-full flex items-center justify-center overflow-hidden">
                     <Image src="/female.png" alt="Female" width={80} height={80} className="object-cover" />
                   </div>
                 </div>
@@ -98,19 +98,19 @@ export function Footer() {
             <div className="flex justify-center gap-4 mb-8">
               <a
                 href="#"
-                className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-300 transition-colors"
+                className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"
               >
                 <Linkedin size={24} className="text-gray-900" />
               </a>
               <a
                 href="#"
-                className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-300 transition-colors"
+                className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"
               >
                 <Facebook size={24} className="text-gray-900" />
               </a>
               <a
                 href="#"
-                className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-300 transition-colors"
+                className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors"
               >
                 <Instagram size={24} className="text-gray-900" />
               </a>

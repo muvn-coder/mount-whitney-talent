@@ -31,7 +31,7 @@ export function HeroSection() {
             Building and transforming businesses through{" "}
             <span className="relative inline-block">
               design innovation
-              <div className="absolute bottom-1 left-0 h-2 bg-yellow-400 transform -skew-x-12 animate-[slideIn_1s_ease-out_0.8s_both] -z-10"></div>
+              <div className="absolute bottom-1 left-0 h-2 bg-blue-500 transform -skew-x-12 animate-[slideIn_1s_ease-out_0.8s_both] -z-10"></div>
             </span>
           </h1>
 
@@ -53,7 +53,7 @@ export function HeroSection() {
               <span className="text-xs text-gray-300 font-medium text-center max-w-24 leading-tight uppercase tracking-wide mb-3">
                 {service.label}
               </span>
-              <div className="w-28 h-28 bg-yellow-400 rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 shadow-lg hover:shadow-xl">
+              <div className="w-28 h-28 bg-blue-500 rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 shadow-lg hover:shadow-xl">
                 <service.icon size={40} className="text-slate-900" />
               </div>
             </div>

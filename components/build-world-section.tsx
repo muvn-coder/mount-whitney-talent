@@ -52,7 +52,7 @@ export function BuildWorldSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20 bg-yellow-400">
+    <section ref={sectionRef} className="py-20 bg-blue-500">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">
           We Build Your{" "}

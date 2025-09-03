@@ -38,7 +38,7 @@ export function AboutSection() {
               <span className="relative inline-block">
                 Mount Whitney Talent
                 <span
-                  className={`absolute bottom-1 left-0 h-3 bg-yellow-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
+                  className={`absolute bottom-1 left-0 h-3 bg-blue-500 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
                     isVisible ? "w-full" : "w-0"
                   }`}
                   style={{ transitionDelay: "500ms" }}
@@ -52,7 +52,7 @@ export function AboutSection() {
                 <span className="relative">
                   <strong>IT solutions, Brand Communication, Digital Marketing, Website Development</strong>
                   <span
-                    className={`absolute bottom-0 left-0 h-1 bg-yellow-400/30 transition-all duration-1000 ease-out -z-10 ${
+                    className={`absolute bottom-0 left-0 h-1 bg-blue-500/30 transition-all duration-1000 ease-out -z-10 ${
                       isVisible ? "w-full" : "w-0"
                     }`}
                     style={{ transitionDelay: "800ms" }}
@@ -62,7 +62,7 @@ export function AboutSection() {
                 <span className="relative">
                   <strong>Mobile App Development.</strong>
                   <span
-                    className={`absolute bottom-0 left-0 h-1 bg-yellow-400/30 transition-all duration-1000 ease-out -z-10 ${
+                    className={`absolute bottom-0 left-0 h-1 bg-blue-500/30 transition-all duration-1000 ease-out -z-10 ${
                       isVisible ? "w-full" : "w-0"
                     }`}
                     style={{ transitionDelay: "1000ms" }}

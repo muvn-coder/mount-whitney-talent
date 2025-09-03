@@ -64,7 +64,7 @@ export function ProjectsSection() {
             <span className="relative inline-block">
               Our Projects
               <div
-                className={`absolute bottom-1 left-0 h-3 bg-yellow-400 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
+                className={`absolute bottom-1 left-0 h-3 bg-blue-500 transform -skew-x-12 transition-all duration-1000 ease-out -z-10 ${
                   highlightVisible || !isClient ? "w-full" : "w-0"
                 }`}
               ></div>
