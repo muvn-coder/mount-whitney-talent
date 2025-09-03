@@ -135,7 +135,7 @@ export default function WorksPage({ searchParams }: { searchParams: Promise<{ pa
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-center mt-16">
+          {/* <div className="flex justify-center mt-16">
             <div className="flex space-x-2">
               {[1, 2, 3].map((page) => (
                 <Link
@@ -151,7 +151,7 @@ export default function WorksPage({ searchParams }: { searchParams: Promise<{ pa
                 </Link>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
