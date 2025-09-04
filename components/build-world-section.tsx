@@ -15,7 +15,7 @@ export function BuildWorldSection() {
       alt: "Branding Materials",
     },
     {
-      src: "/team-photo-in-aquarium-setting.jpeg",
+      src: "/team-photo-in-aquarium-setting.png",
       alt: "Team Photo",
     },
     {
@@ -84,7 +84,7 @@ export function BuildWorldSection() {
                 <img
                   src={image.src || "/placeholder.svg"}
                   alt={image.alt}
-                  className="w-64 h-80 object-cover rounded-2xl"
+                  className="w-128 h-80 object-cover rounded-2xl"
                 />
               </div>
             </div>
