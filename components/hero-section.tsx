@@ -15,15 +15,14 @@ export function HeroSection() {
   ]
 
   return (
-    <section className="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-700 min-h-screen flex items-center relative overflow-hidden pt-16">
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1200 300" className="w-full h-64 text-slate-600 opacity-30">
-          <path
-            fill="currentColor"
-            d="M0,300 L0,200 L100,200 L100,150 L200,150 L200,100 L300,100 L300,180 L400,180 L400,120 L500,120 L500,160 L600,160 L600,80 L700,80 L700,140 L800,140 L800,90 L900,90 L900,170 L1000,170 L1000,110 L1100,110 L1100,190 L1200,190 L1200,300 Z"
-          />
-        </svg>
+    <section className="min-h-screen flex items-center relative overflow-hidden pt-16">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/smart.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black/70"></div>
       </div>
+      
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
         <div className="animate-[fadeInUp_1s_ease-out_forwards]">
