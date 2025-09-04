@@ -24,7 +24,7 @@ const blogPosts: Record<string, BlogPost> = {
     author: "Web Development Team",
     date: "December 20, 2024",
     category: "Web Development",
-    image: "/web-development-trends-2024.png"
+    image: "/web1.jpg"
   },
   "react-native-vs-flutter-2024": {
     id: "react-native-vs-flutter-2024",
@@ -51,7 +51,7 @@ const blogPosts: Record<string, BlogPost> = {
     author: "AI Development Team",
     date: "December 12, 2024",
     category: "AI Development",
-    image: "/it-infrastructure-scalability.png"
+    image: "/ai1.jpg"
   },
   "microservices-architecture-scaling": {
     id: "microservices-architecture-scaling",
@@ -69,7 +69,7 @@ const blogPosts: Record<string, BlogPost> = {
     author: "Mobile Development Team",
     date: "December 8, 2024",
     category: "Mobile Development",
-    image: "/mobile-first-design-concept.png"
+    image: "/mob1.jpg"
   },
   "nft-marketplace-development": {
     id: "nft-marketplace-development",
@@ -78,7 +78,7 @@ const blogPosts: Record<string, BlogPost> = {
     author: "Blockchain Team",
     date: "December 5, 2024",
     category: "Blockchain Development",
-    image: "/digital-marketing-dashboard.png"
+    image: "/block1.jpg"
   },
   "ai-powered-chatbots-implementation": {
     id: "ai-powered-chatbots-implementation",

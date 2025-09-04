@@ -19,7 +19,7 @@ export default function InsightsPage() {
       author: "Web Development Team",
       date: "December 20, 2024",
       category: "Web Development",
-      image: "/web-development-trends-2024.png",
+      image: "/web1.jpg",
     },
     {
       id: "react-native-vs-flutter-2024",
@@ -46,7 +46,7 @@ export default function InsightsPage() {
       author: "AI Development Team",
       date: "December 12, 2024",
       category: "AI Development",
-      image: "/it-infrastructure-scalability.png",
+      image: "/ai1.jpg",
     },
     {
       id: "microservices-architecture-scaling",
@@ -64,7 +64,7 @@ export default function InsightsPage() {
       author: "Mobile Development Team",
       date: "December 8, 2024",
       category: "Mobile Development",
-      image: "/mobile-first-design-concept.png",
+      image: "/mob1.jpg",
     },
     {
       id: "nft-marketplace-development",
@@ -73,7 +73,7 @@ export default function InsightsPage() {
       author: "Blockchain Team",
       date: "December 5, 2024",
       category: "Blockchain Development",
-      image: "/digital-marketing-dashboard.png",
+      image: "/block1.jpg",
     },
     {
       id: "ai-powered-chatbots-implementation",
