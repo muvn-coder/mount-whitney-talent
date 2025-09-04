@@ -26,7 +26,7 @@ const testimonials = [
     position: "Marketing Director, GrowthCo",
     content:
       "The team at Mount Whitney Talent is exceptional. They understood our vision and brought it to life with remarkable precision.",
-    avatar: "/professional-woman-avatar.png",
+    avatar: "/professional-woman-avatar1.png",
   },
 ]
 
