@@ -78,7 +78,7 @@ export function TeamSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-4 gap-3 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 md:gap-3 mb-16">
           {teamMembers.map((member, index) => (
             <div
               key={member.id}
@@ -88,6 +88,7 @@ export function TeamSection() {
               style={{ transitionDelay: `${index * 100 + 500}ms` }}
               onMouseEnter={() => setHoveredMember(member.id)}
               onMouseLeave={() => setHoveredMember(null)}
+              onTouchStart={() => setHoveredMember(hoveredMember === member.id ? null : member.id)}
             >
               <div className="group cursor-pointer relative">
                 <div
@@ -102,17 +103,17 @@ export function TeamSection() {
                         : "/white-avatar-card.png"
                     }
                     alt={member.name}
-                    className="w-36 h-36 object-contain"
+                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 object-contain"
                   />
 
                   {hoveredMember === member.id && (
-                    <div className="absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-between p-6 text-white animate-in fade-in duration-200">
+                    <div className="absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-between p-2 md:p-4 text-white animate-in fade-in duration-200">
                       <div className="text-center">
-                        <h4 className="font-bold text-lg">{member.name}</h4>
-                        <p className="text-base italic mb-3">"{member.quote}"</p>
+                        <h4 className="font-bold text-sm md:text-base lg:text-lg">{member.name}</h4>
+                        <p className="text-xs md:text-sm italic mb-1 md:mb-2 leading-tight">"{member.quote}"</p>
                       </div>
                       <div className="text-left">
-                        <p className="text-base text-slate-400">{member.role}</p>
+                        <p className="text-xs md:text-sm text-slate-400 leading-tight">{member.role}</p>
                       </div>
                     </div>
                   )}

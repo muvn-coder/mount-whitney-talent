@@ -19,11 +19,11 @@ export function Footer() {
             </div>
 
             {/* Avatar Section */}
-            <div className="flex gap-8">
+            <div className="flex flex-nowrap justify-center gap-4 md:gap-6 lg:gap-8">
               <div className="text-center">
                 <p className="text-gray-900 font-medium mb-2">Hi</p>
-                <div className="w-24 h-24 bg-slate-300 rounded-full mb-2 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-slate-300 rounded-full mb-2 flex items-center justify-center">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
                     <Image src="/male.png" alt="Male" width={80} height={80} className="object-cover" />
                   </div>
                 </div>
@@ -31,8 +31,8 @@ export function Footer() {
 
               <div className="text-center">
                 <p className="text-gray-900 font-medium mb-2">Hai</p>
-                <div className="w-24 h-24 bg-slate-300 rounded-full mb-2 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-slate-300 rounded-full mb-2 flex items-center justify-center">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
                     <Image src="/female.png" alt="Female" width={80} height={80} className="object-cover" />
                   </div>
                 </div>
@@ -40,8 +40,8 @@ export function Footer() {
 
               <div className="text-center">
                 <p className="text-gray-900 font-medium mb-2">你好</p>
-                <div className="w-24 h-24 bg-slate-300 rounded-full mb-2 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-slate-300 rounded-full mb-2 flex items-center justify-center">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
                     <Image src="/male.png" alt="Male" width={80} height={80} className="object-cover" />
                   </div>
                 </div>
@@ -49,8 +49,8 @@ export function Footer() {
 
               <div className="text-center">
                 <p className="text-gray-900 font-medium mb-2">வணக்கம்</p>
-                <div className="w-24 h-24 bg-slate-300 rounded-full mb-2 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-slate-300 rounded-full mb-2 flex items-center justify-center">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-slate-200 rounded-full flex items-center justify-center overflow-hidden">
                     <Image src="/female.png" alt="Female" width={80} height={80} className="object-cover" />
                   </div>
                 </div>

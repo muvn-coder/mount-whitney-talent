@@ -41,7 +41,7 @@ export function Navigation() {
         <div className="flex justify-between items-center py-3 h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="h-30 relative -my-6 overflow-visible">
+            <div className="h-20 md:h-30 relative -my-4 md:-my-6 overflow-visible">
               <img 
                 src={isOnHero ? "/logo.png" : "/logo-black.png"} 
                 alt="Mount Whitney Talent" 

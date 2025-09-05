@@ -40,20 +40,20 @@ export function HeroSection() {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center items-end gap-8 md:gap-16 lg:gap-20 mt-16">
+        <div className="flex flex-wrap justify-center items-end gap-6 md:gap-12 lg:gap-16 xl:gap-20 mt-12 md:mt-16">
           {services.map((service, index) => (
             <div
               key={service.label}
               className={`flex flex-col items-center group cursor-pointer animate-[fadeInUp_0.7s_ease-out_forwards] ${
-                index % 2 === 0 ? "transform -translate-y-8" : "transform translate-y-8"
+                index % 2 === 0 ? "transform md:-translate-y-8" : "transform md:translate-y-8"
               }`}
               style={{ animationDelay: `${service.delay + 400}ms` }}
             >
-              <span className="text-xs text-gray-300 font-medium text-center max-w-24 leading-tight uppercase tracking-wide mb-3">
+              <span className="text-xs text-gray-300 font-medium text-center max-w-20 md:max-w-24 leading-tight uppercase tracking-wide mb-3">
                 {service.label}
               </span>
-              <div className="w-28 h-28 bg-slate-400 rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 shadow-lg hover:shadow-xl">
-                <service.icon size={40} className="text-slate-900" />
+              <div className="w-16 h-16 md:w-20 lg:w-24 md:h-20 lg:h-24 bg-slate-400 rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 shadow-lg hover:shadow-xl">
+                <service.icon size={16} className="text-slate-900 md:w-8 md:h-8 lg:w-10 lg:h-10" />
               </div>
             </div>
           ))}

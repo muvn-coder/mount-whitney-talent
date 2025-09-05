@@ -32,18 +32,18 @@ export function ScrollToTop() {
   }
 
   return (
-    <div className="fixed bottom-24 right-8 z-50">
+    <div className="fixed bottom-16 right-4 md:bottom-24 md:right-8 z-50">
       <button
         type="button"
         onClick={scrollToTop}
         className={`
           bg-white hover:bg-gray-100 text-gray-900 
-          rounded-lg p-3 shadow-lg transition-all duration-300 border border-gray-300
+          rounded-lg p-2 md:p-3 shadow-lg transition-all duration-300 border border-gray-300
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}
         `}
         aria-label="Scroll to top"
       >
-        <ChevronUp className="h-6 w-6" />
+        <ChevronUp className="h-5 w-5 md:h-6 md:w-6" />
       </button>
     </div>
   )

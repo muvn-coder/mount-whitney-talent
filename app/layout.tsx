@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Mount Whitney Talent - We build your world',
   description: 'We are a digital agency with extensive experience in Web, App, IT Solutions, Digital Marketing, Brand Communication Solutions.',
   generator: 'Mount Whitney Talent',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },

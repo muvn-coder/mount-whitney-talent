@@ -67,7 +67,7 @@ export function BuildWorldSection() {
           requires a different spotlight to shine.
         </p>
 
-        <div className="flex justify-center items-end space-x-8 overflow-hidden">
+        <div className="flex justify-center items-end space-x-4 md:space-x-8 overflow-hidden px-4">
           {images.map((image, index) => (
             <div
               key={index}
@@ -84,7 +84,7 @@ export function BuildWorldSection() {
                 <img
                   src={image.src || "/placeholder.svg"}
                   alt={image.alt}
-                  className="w-128 h-80 object-cover rounded-2xl"
+                  className="w-64 h-48 md:w-96 md:h-64 lg:w-128 lg:h-80 object-cover rounded-2xl"
                 />
               </div>
             </div>
